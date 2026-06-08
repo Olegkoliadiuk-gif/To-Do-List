@@ -1,6 +1,6 @@
-import { getTodos, saveTodos } from "./utils/storage.js";
-import { createTodoItem } from "./components/todo-item.js";
-import { handleFormSubmit } from "./components/todo-form.js";
+import { getTodos, saveTodos } from "../utils/storage.js";
+import { createTodoItem } from "../components/todo-item.js";
+import { handleFormSubmit } from "../components/todo-form.js";
 
 const form = document.querySelector("#todo-form");
 const todoList = document.querySelector("#todo-list");
