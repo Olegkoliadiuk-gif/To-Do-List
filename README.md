@@ -1,62 +1,46 @@
 # To-Do List Application
 
-A modern, minimalist To-Do application designed for tracking daily tasks. The project is built using pure JavaScript (ES6+) without any external frameworks.
+A modern, minimalist web application designed for tracking daily tasks. The project is implemented using pure JavaScript (ES6+) without the use of external frameworks or libraries.
 
-## 🚀 Features
+## 💻 Features
 
-- **Add Tasks**: Create new tasks easily using the input form.
-- **Data Persistence**: All tasks are saved to `localStorage`, so they persist even after refreshing the page.
-- **Task Status**: Mark tasks as completed using checkboxes.
-- **Management**: Delete individual tasks or use the "Clear All" button to wipe the list.
-- **Responsive Design**: The app looks great on both desktops and mobile devices.
+- **Task Creation**: Seamless generation of new entries utilizing the input form component.
+- **Data Persistence**: Automatic synchronization of the task list with `localStorage` to preserve state across page reloads.
+- **Status Tracking**: Interactive checkbox functionality to toggle and monitor the completion status of individual items.
+- **List Management**: Support for targeted deletion of specific entries or complete purging of the list via a unified control interface.
+- **Responsive Layout**: Adaptive user interface optimized for consistent presentation across mobile devices and desktop monitors.
 
-## 🛠 Technologies
+## 🖥️ Technology Stack
 
-- **HTML5**: Semantic markup.
-- **CSS3**: Flexbox, CSS Variables, and animations.
-- **JavaScript (ES6+)**: Modular architecture, DOM manipulation, and `localStorage` API.
+- **HTML5**: Semantic document structure.
+- **CSS3**: Layout design leveraging Flexbox, modular CSS variables, and fluid animations.
+- **JavaScript (ES6+)**: Modular application architecture, explicit DOM manipulation, and native `localStorage` API integration.
 
 ## 📂 Project Structure
 
-```text
-/
-├── src/
-│   ├── components/
-│   │   ├── todo-form.js      # Form submission logic
-│   │   └── todo-item.js      # Individual task element logic
-│   ├── utils/
-│   │   ├── id-gen.js         # Unique ID generator
-│   │   └── storage.js        # localStorage interaction
-│   └── app.js                # Main application controller
-├── index.html                # Main entry point
-└── style.css                 # Project styles
-```
-
-## 🔧 Updated Folder Layout
-
-Project now uses a `public/` folder for the web entry and keeps sources under `src/`:
+The deployment workflow isolates production-ready assets within the `public/` directory, while development source files reside in the `src/` directory:
 
 ```text
 /
 ├── public/
-│   ├── index.html           # Entry HTML (open this in the browser)
-│   └── style.css            # Styles used by the public site
+│   ├── index.html           # Main HTML entry point
+│   └── style.css            # Production stylesheet
 ├── src/
 │   ├── js/
-│   │   └── app.js           # Main application controller (ES module)
+│   │   └── app.js           # Core application controller (ES module)
 │   ├── components/
-│   │   ├── todo-form.js     # Form submission logic
-│   │   └── todo-item.js     # Individual task element logic
+│   │   ├── todo-form.js     # Form submission and input processing logic
+│   │   └── todo-item.js     # Rendering and state logic for individual tasks
 │   └── utils/
-│       ├── id-gen.js        # Unique ID generator
-│       └── storage.js       # localStorage interaction
+│       ├── id-gen.js        # Unique identifier generator utility
+│       └── storage.js       # Interface module for localStorage interactions
 ├── README.md
 └── .gitignore
 ```
 
-## ▶️ How to run
+## 🎮 How to run
 
-Open `public/index.html` directly in the browser, or serve `public/` with a simple static server (recommended for proper module support):
+To ensure proper resolution of native JavaScript modules, serving the application through a local static web server is required.
 
 Using `http-server` (Node.js):
 
@@ -73,8 +57,8 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8080` (for `http-server`) or `http://localhost:8000` in your browser.
 
-## 📝 Notes
+## ⌚️ Notes
 
-- The app stores tasks in `localStorage` under the key `my-todos`.
-- To develop, edit files under `src/` and keep `public/` as the served output.
-- If you want, I can add a dev script (`package.json`) or set up a small build step.
+- The application serializes and commits dataset updates to browser memory under the storage key `my-todos`.
+- Development modifications must be performed exclusively within the `src/` directory.
+- The current architecture is designed for expansion; a `package.json` manifest can be introduced if build step automation becomes necessary.
